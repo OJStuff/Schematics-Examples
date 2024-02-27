@@ -1,0 +1,155 @@
+*$
+* LM317-N
+*****************************************************************************
+* (C) Copyright 2015 Texas Instruments Incorporated. All rights reserved.
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.
+** TI and its licensors and suppliers make no warranties, either expressed
+** or implied, with respect to this model, including the warranties of
+** merchantability or fitness for a particular purpose. The model is
+** provided solely on an "as is" basis. The entire risk as to its quality
+** and performance is with the customer.
+*****************************************************************************
+*
+** Released by: WEBENCH Design Center, Texas Instruments Inc.
+* Part: LM317-N
+* Date: 05APR2016 
+* Model Type: Transient
+* Simulator: PSPICE
+* Simulator Version: 16.2.0.p001
+* EVM Order Number: NA
+* EVM Users Guide: NA
+* Datasheet: SNVS774O–MAY 2004–REVISED JANUARY 2014
+*
+* Model Version: Final 1.00
+*
+*****************************************************************************
+*
+* Updates:
+*
+* Final 1.00
+* Release to Web
+*
+*****************************************************************************
+*
+* Model Usage Notes:
+*
+* A. Features have been modelled
+*	1. Startup Response 
+*	2. Peak Current Limit
+*	3. Dropout Voltage vs Output Current  
+*	4. Line & Load Transinet Response 
+*
+* B. Features haven't been modelled
+*	1. Quiescent Current vs Input Voltage
+*	2. Temperature dependent characteristics 
+*	3. PSRR Response 
+*
+*****************************************************************************
+.SUBCKT LM317-N IN ADJ OUT 
+C_C3         VYY 0  1n  
+R_R6         N16798777 VYY  1 TC=0,0 
+C_C5         N16779363 0  1n  
+X_S1    N16779363 0 IN N313078 LM317-N_S1 
+R_R7         N16779363 N16785459  100 TC=0,0 
+R_R5         VZZ VYY  {ROUT}  
+E_ABM2         N16785459 0 VALUE { IF(V(IN_OK) > 0.5, 1, 0)    }
+G_ABMII1         ADJ 0 VALUE { IF(V(IN_OK) > 1.2, -0.2u,0)    }
+E_ABM1         N16798777 0 VALUE { MIN(V(VXX), (V(Vzz)+(ILIM*ROUT)))    }
+R_R2         N16830911 VXX  {PSRR*RINP}  
+C_U1_C1         U1_N41579 0  {1e-6*SQRT(TTRN)}  
+R_U1_R3         U1_N41941 U1_N41579  {3.333e5*SQRT(TTRN)} TC=0,0 
+C_U1_C4         0 U1_N15528092  1n  TC=0,0 
+E_U1_ABM4         U1_N41605 0 VALUE { V(U1_N41579)*
++  (ABS(V(OUT))/(ABS(V(OUT)-V(ADJ))))    }
+X_U1_U6         U1_N15528092 IN_OK BUF_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=0.5
+R_U1_R2         0 U1_N41583  1G  
+X_U1_U12         U1_N15528092 U1_IN_INT d_d1
+R_U1_R1         0 U1_N41579  1G  
+E_U1_ABM6         U1_N41941 0 VALUE { IF(V(IN_OK) > 0.5, V(U1_N53690), 0)    }
+X_U1_U7         IN U1_N15528024 U1_IN_INT COMP_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=0.5
+V_U1_V1         U1_N53690 0 1.25
+E_U1_E1         U1_DROPOUT 0 TABLE { V(ISENSE)-V(0) } 
++ ( (20m,1.5)(200m,1.62)(500m,1.75)(1,2)(1.5,2.25) )
+R_U1_R5         U1_N41885 N16830911  1 TC=0,0 
+V_U1_V5         U1_N15528024 0 1.5
+E_U1_ABM5         U1_N41885 0 VALUE { MIN(V(U1_N41583),  
++ MAX(V(IN) - V(U1_DROPOUT), 0))   }
+C_U1_C3         N16830911 0  1n  
+C_U1_C2         U1_N41583 0  1n  
+R_U1_R4         U1_N41605 U1_N41583  1 TC=0,0 
+X_U1_U11         U1_IN_INT U1_N15528152 d_d1 
+R_U1_R8         U1_N15528152 U1_N15528092  432.9k TC=0,0 
+C_C1         VXX N313078  {1/(6.28*RINP*POLE)}  
+C_C2         N16830911 VXX  {1/(6.28*PSRR*RINP*ZERO/3.35)}  
+R_R1         N313078 VXX  {RINP}  
+X_F1    VZZ N313070 N313078 VYY LM317-N_F1 
+X_S2    IN_OK 0 N16857443 OUT LM317-N_S2 
+X_H1    N313070 N16857443 ISENSE 0 LM317-N_H1 
+.PARAM  psrr=1.778e-3 ilim=2.2 pole=600 zero=800k rinp=10e6 ttrn=60u rout=1m
++  vref=1.25
+.ENDS LM317-N
+*$
+.SUBCKT LM317-N_S1 1 2 3 4  
+S_S1         3 4 1 2 _S1
+RS_S1         1 2 1G
+.MODEL         _S1 VSWITCH Roff=100 Ron=11 Voff=0.1V Von=0.9V
+.ENDS LM317-N_S1
+*$
+.SUBCKT LM317-N_F1 1 2 3 4  
+F_F1         3 4 VF_F1 1
+VF_F1         1 2 0V
+.ENDS LM317-N_F1
+*$
+.SUBCKT LM317-N_S2 1 2 3 4  
+S_S2         3 4 1 2 _S2
+RS_S2         1 2 1G
+.MODEL         _S2 VSWITCH Roff=1E6 Ron=1m Voff=0.1V Von=0.9V
+.ENDS LM317-N_S2
+*$
+.SUBCKT LM317-N_H1 1 2 3 4  
+H_H1         3 4 VH_H1 1
+VH_H1         1 2 0V
+.ENDS LM317-N_H1
+*$
+.SUBCKT COMP_BASIC_GEN INP INM Y PARAMS: VDD=1 VSS=0 VTHRESH=0.5	
+E_ABM Yint 0 VALUE {IF (V(INP) > 
++ V(INM), {VDD},{VSS})}
+R1 Yint Y 1
+C1 Y 0 1n
+.ENDS COMP_BASIC_GEN
+*$
+.SUBCKT COMPHYS_BASIC_GEN INP INM HYS OUT PARAMS: VDD=1 VSS=0 VTHRESH=0.5	
+EIN INP1 INM1 INP INM 1 
+EHYS INP1 INP2 VALUE { IF( V(1) > {VTHRESH},-V(HYS),0) }
+EOUT OUT 0 VALUE { IF( V(INP2)>V(INM1), {VDD} ,{VSS}) }
+R1 OUT 1 1
+C1 1 0 5n
+RINP1 INP1 0 1K
+.ENDS COMPHYS_BASIC_GEN
+*$
+.SUBCKT COMPHYS2_BASIC_GEN INP INM HYS OUT PARAMS: VDD=1 VSS=0 VTHRESH=0.5	
++ T=10
+EIN INP1 INM1 INP INM 1 
+EHYS INM2 INM1 VALUE { IF( V(1) > {VTHRESH},-V(HYS)/2,V(HYS)/2) }
+EOUT OUT 0 VALUE { IF( V(INP1)>V(INM2), {VDD} ,{VSS}) }
+R1 OUT 1 1
+C1 1 0 {T*1e-9}
+RINP1 INP1 0 10K
+RINM2 INM2 0 10K
+.ENDS COMPHYS2_BASIC_GEN
+*$
+.SUBCKT D_D1 1 2
+d1 1 2 dd1
+.MODEL dd1 d (Is=1e-015 TT=1e-011 Rs=0 N=0.1)
+.ENDS D_D1
+*$
+.SUBCKT BUF_BASIC_GEN A  Y PARAMS: VDD=1 VSS=0 VTHRESH=0.5 
+E_ABMGATE    YINT 0 VALUE {{IF(V(A) > {VTHRESH} , 
++ {VDD},{VSS})}}
+RINT YINT Y 1
+CINT Y 0 1n
+.ENDS BUF_BASIC_GEN
+*$
