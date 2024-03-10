@@ -1,6 +1,6 @@
 All licenses in this repository are copyrighted by their respective authors.
 
-Everything else is released under CC0.
+Everything else is released under CC0 1.0
 
 ------------------------------------------------------------------------------
 
@@ -27,4 +27,4 @@ Other Information:
     * When using or citing the work, you should not imply endorsement
     by the author or the affirmer.
 
-http://creativecommons.org/publicdomain/zero/1.0/legalcode
+[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)
