@@ -4,7 +4,7 @@ This collection of schematic circuits are used as examples by me when teaching m
 
 ## Simulation
 
-To do a simulation, you access the "Simulate circuit in SPICE" button in the Schematic Editor. Then access "Run/Stop Simulation" button in the "Spice Simulator" window. To show the results of a simultaion, you must access the "Add Signals" or "Probe" button. Commands for the simulator is placed above the title field in the schematic.
+To do a simulation, you access the "Simulate circuit in SPICE" button in the Schematic Editor. Then access "Run/Stop Simulation" button in the "Spice Simulator" window. To show other signals that is set up, you must access the "Add Signals" or "Probe" button. Commands for the simulator are placed just above the title field in the schematic.
 
 ## Engineering
 

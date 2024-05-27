@@ -67,8 +67,14 @@
     "visible_layers": "fffffff_ffffffff",
     "zone_display_mode": 0
   },
+  "git": {
+    "repo_password": "",
+    "repo_type": "",
+    "repo_username": "",
+    "ssh_key": ""
+  },
   "meta": {
-    "filename": "KiCad_Simulation_Commands.kicad_prl",
+    "filename": "KiCad-Simulation-commands.kicad_prl",
     "version": 3
   },
   "project": {

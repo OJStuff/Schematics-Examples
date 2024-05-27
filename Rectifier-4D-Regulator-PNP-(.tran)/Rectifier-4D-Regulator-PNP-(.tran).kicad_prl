@@ -67,8 +67,14 @@
     "visible_layers": "fffffff_ffffffff",
     "zone_display_mode": 0
   },
+  "git": {
+    "repo_password": "",
+    "repo_type": "",
+    "repo_username": "",
+    "ssh_key": ""
+  },
   "meta": {
-    "filename": "Rectifier_4D_Regulator_PNP_(.tran).kicad_prl",
+    "filename": "Rectifier-4D-Regulator-PNP-(.tran).kicad_prl",
     "version": 3
   },
   "project": {
