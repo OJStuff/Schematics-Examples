@@ -6,8 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "KiCad Simulation commands")
-		(date "2024-05-27")
-		(rev "2")
+		(date "2024-12-15")
 		(company "GitHub/OJStuff")
 	)
 	(lib_symbols

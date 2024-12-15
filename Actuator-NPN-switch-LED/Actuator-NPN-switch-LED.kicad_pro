@@ -2,25 +2,10 @@
   "board": {
     "3dviewports": [],
     "design_settings": {
-      "defaults": {
-        "board_outline_line_width": 0.1,
-        "copper_line_width": 0.2,
-        "copper_text_size_h": 1.5,
-        "copper_text_size_v": 1.5,
-        "copper_text_thickness": 0.3,
-        "other_line_width": 0.15,
-        "silk_line_width": 0.15,
-        "silk_text_size_h": 1.0,
-        "silk_text_size_v": 1.0,
-        "silk_text_thickness": 0.15
-      },
+      "defaults": {},
       "diff_pair_dimensions": [],
       "drc_exclusions": [],
-      "rules": {
-        "min_copper_edge_clearance": 0.0,
-        "solder_mask_clearance": 0.0,
-        "solder_mask_min_width": 0.0
-      },
+      "rules": {},
       "track_widths": [],
       "via_dimensions": []
     },
@@ -254,7 +239,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "KiCad-Simulation-commands.kicad_pro",
+    "filename": "Actuator-NPN-switch-LED.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -271,9 +256,9 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
         "wire_width": 6
       }
     ],
@@ -392,7 +377,7 @@
         "version": 0
       },
       "model_mode": 4,
-      "workbook_filename": ""
+      "workbook_filename": "Actuator-NPN-switch-LED.wbk"
     },
     "page_layout_descr_file": "",
     "plot_directory": "",
@@ -407,7 +392,7 @@
   },
   "sheets": [
     [
-      "28a935e5-3029-420c-872b-1d7b7cf6a0fb",
+      "5efcba29-6960-4983-8205-1ea3cd09c91f",
       "Root"
     ]
   ],

@@ -1,0 +1,2 @@
+.model LED D (Is=1e-18 N=1.8 Rs=6)
+

@@ -254,7 +254,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "KiCad-Simulation-commands.kicad_pro",
+    "filename": "RC-Charge.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -388,14 +388,16 @@
     "net_format_name": "",
     "ngspice": {
       "fix_include_paths": true,
+      "fix_passive_vals": false,
       "meta": {
         "version": 0
       },
       "model_mode": 4,
-      "workbook_filename": ""
+      "workbook_filename": "RC-Charge.wbk"
     },
     "page_layout_descr_file": "",
     "plot_directory": "",
+    "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -407,7 +409,7 @@
   },
   "sheets": [
     [
-      "28a935e5-3029-420c-872b-1d7b7cf6a0fb",
+      "7c5bb819-e280-4499-986e-55338ead2746",
       "Root"
     ]
   ],

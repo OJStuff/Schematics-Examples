@@ -254,7 +254,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "KiCad-Simulation-commands.kicad_pro",
+    "filename": "Transformer-1P-2S.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -388,14 +388,16 @@
     "net_format_name": "",
     "ngspice": {
       "fix_include_paths": true,
+      "fix_passive_vals": false,
       "meta": {
         "version": 0
       },
       "model_mode": 4,
-      "workbook_filename": ""
+      "workbook_filename": "Transformer-1P-2S.wbk"
     },
     "page_layout_descr_file": "",
     "plot_directory": "",
+    "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -407,7 +409,7 @@
   },
   "sheets": [
     [
-      "28a935e5-3029-420c-872b-1d7b7cf6a0fb",
+      "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
       "Root"
     ]
   ],
