@@ -1,17 +1,19 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "28a935e5-3029-420c-872b-1d7b7cf6a0fb")
 	(paper "A4")
 	(title_block
 		(title "KiCad Simulation commands")
-		(date "2024-12-15")
+		(date "2025-09-13")
 		(company "GitHub/OJStuff")
 	)
 	(lib_symbols
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -130,12 +132,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "GND_1"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -226,9 +233,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "VDC_1"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.0254)
 			)
@@ -426,9 +436,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "VPULSE_1"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.0254)
 			)
@@ -600,9 +613,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "VSIN_1"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.0254)
 			)
@@ -702,9 +718,9 @@
 			)
 			(symbol "VSIN_1_0_0"
 				(arc
-					(start 0 0)
+					(start -1.27 0)
 					(mid -0.635 0.6323)
-					(end -1.27 0)
+					(end 0 0)
 					(stroke
 						(width 0)
 						(type default)
@@ -714,9 +730,9 @@
 					)
 				)
 				(arc
-					(start 0 0)
+					(start 1.27 0)
 					(mid 0.635 -0.6323)
-					(end 1.27 0)
+					(end 0 0)
 					(stroke
 						(width 0)
 						(type default)
@@ -785,9 +801,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "VSIN_2"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.0254)
 			)
@@ -887,9 +906,9 @@
 			)
 			(symbol "VSIN_2_0_0"
 				(arc
-					(start 0 0)
+					(start -1.27 0)
 					(mid -0.635 0.6323)
-					(end -1.27 0)
+					(end 0 0)
 					(stroke
 						(width 0)
 						(type default)
@@ -899,9 +918,9 @@
 					)
 				)
 				(arc
-					(start 0 0)
+					(start 1.27 0)
 					(mid 0.635 -0.6323)
-					(end 1.27 0)
+					(end 0 0)
 					(stroke
 						(width 0)
 						(type default)
@@ -970,7 +989,177 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(rectangle
+		(start 13.97 127)
+		(end 175.26 160.02)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 03117eb3-04bf-42eb-9077-2e57df23132c)
+	)
+	(rectangle
+		(start 13.97 162.56)
+		(end 175.26 195.58)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 148bbce3-096d-4574-bfcd-f5c42f213187)
+	)
+	(rectangle
+		(start 13.97 55.88)
+		(end 175.26 88.9)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 7cf69237-576d-4c05-896f-99d333d9933f)
+	)
+	(rectangle
+		(start 13.97 91.44)
+		(end 175.26 124.46)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 888976dc-3cda-4fe6-af37-933aefe2589f)
+	)
+	(rectangle
+		(start 13.97 20.32)
+		(end 175.26 53.34)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid f0c11082-bb6d-4f8f-8844-d4b193b473b9)
+	)
+	(text ";Parameters the KiCad way"
+		(exclude_from_sim no)
+		(at 19.05 17.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "12359fcc-fcf1-4ebe-8e7b-401e131d3fc6")
+	)
+	(text ";Simulation commands"
+		(exclude_from_sim no)
+		(at 152.4 17.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "531bac51-188f-4af6-b8b9-6c0f8db3a581")
+	)
+	(text ";.op"
+		(exclude_from_sim no)
+		(at 152.4 148.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6a0e39c8-e356-4203-98a7-548e987569f3")
+	)
+	(text ";.ac dec 1000 1 1meg"
+		(exclude_from_sim no)
+		(at 152.4 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9149b72d-d02a-484e-8dcb-5f37a3fcf68b")
+	)
+	(text ";.tran .1m 100m"
+		(exclude_from_sim no)
+		(at 152.4 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9ab0f56c-d4c5-4aa6-9ba5-9359d835cd4f")
+	)
+	(text ".tran .1m 100m"
+		(exclude_from_sim no)
+		(at 152.4 41.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ae90ec0f-a770-4825-a9f9-659ffd432cac")
+	)
+	(text ";Parameters the PSPICE/LTSPICE way"
+		(exclude_from_sim no)
+		(at 101.854 17.526 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1510e7c-458a-47fd-a6d7-f02a8a9d66c4")
+	)
+	(text ";.dc R9 10 1k 10"
+		(exclude_from_sim no)
+		(at 152.4 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e933feed-d403-4e5e-8f7c-09e54a73b17e")
+	)
+	(text_box "; Examples and cheatsheet for simulation in KiCad, taken\n; from \"PSPICE Command Summary\" pdf-file.\n; \n; * * * STIMULUS TYPE * * *\n; \n; dc 0 sin(0 15 50  0  0  0)\n;  \\  \\  \\  \\  \\  \\  \\  \\  \\_ _ _  phase (phase)\n;   \\  \\  \\  \\  \\  \\  \\  \\_ _ _ _  df (damping factor)\n;    \\  \\  \\  \\  \\  \\  \\_ _ _ _ _  td (delay)\n;     \\  \\  \\  \\  \\  \\_ _ _ _ _ _  freq (frequency)\n;      \\  \\  \\  \\  \\_ _ _ _ _ _ _  va (peak amplitude voltage)\n;       \\  \\  \\  \\_ _ _ _ _ _ _ _  vo (offset voltage)\n;        \\  \\  \\_ _ _ _ _ _ _ _ _  stimulus type sinus\n;         \\  \\_ _ _ _ _ _ _ _ _ _  dc voltage (usually not needed)\n;          \\_ _ _ _ _ _ _ _ _ _ _  dc stimulus (usually not needed)\n; \n; dc 0 pulse(0  5  0  0  0  1m 2m)\n;  \\  \\    \\  \\  \\  \\  \\  \\  \\  \\_ per (periode)\n;   \\  \\    \\  \\  \\  \\  \\  \\  \\_ _ pw (pulse width)\n;    \\  \\    \\  \\  \\  \\  \\  \\_ _ _ tf (fall time)\n;     \\  \\    \\  \\  \\  \\  \\_ _ _ _ tr (rise time)\n;      \\  \\    \\  \\  \\  \\_ _ _ _ _ td (delay time)\n;       \\  \\    \\  \\  \\_ _ _ _ _ _ v2 (pulsed voltage)\n;        \\  \\    \\  \\_ _ _ _ _ _ _ v1 (initial voltage)\n;         \\  \\    \\_ _ _ _ _ _ _ _ stimulus type pulse\n;          \\  \\_ _ _ _ _ _ _ _ _ _ dc voltage (usually not needed)\n;           \\_ _ _ _ _ _ _ _ _ _ _ dc stimulus (usually not needed)\n; \n; * * * ANALYSE TYPE * * *\n; \n; .op                              dc op mode (dc compute, no plot)\n; \n; .dc V1 1 100 1\n;   \\  \\  \\  \\  \\_ _ _ _ _ _ _ _ _ variable value step\n;    \\  \\  \\  \\_ _ _ _ _ _ _ _ _ _ variable value stop\n;     \\  \\  \\_ _ _ _ _ _ _ _ _ _ _ variable value start\n;      \\  \\_ _ _ _ _ _ _ _ _ _ _ _ variable (component/source)\n;       \\_ _ _ _ _ _ _ _ _ _ _ _ _ dc analysis\n; \n; .ac lin/dec 1000 1 1meg\n;  \\      \\      \\  \\  \\_ _ _ _ _  frequency stop\n;   \\      \\      \\  \\_ _ _ _ _ _  frequency start\n;    \\      \\      \\_ _ _ _ _ _ _  points\n;     \\      \\_ _ _ _ _ _ _ _ _ _  lin or dec plot\n;      \\_ _ _ _ _ _ _ _ _ _ _ _ _  ac analysis (frequency sweep)\n; \n; .tran 1m  1\n;  \\      \\  \\_ _ _ _ _ _ _ _ _ _  end time\n;   \\      \\_ _ _ _ _ _ _ _ _ _ _  steps\n;    \\_ _ _ _ _ _ _ _ _ _ _ _ _ _  transient analysis"
+		(exclude_from_sim no)
+		(at 177.8 20.32 0)
+		(size 104.14 139.7)
+		(margins 1.125 1.125 1.125 1.125)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "Courier New")
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "aca74c05-6553-4061-965c-e53432a55343")
 	)
 	(wire
 		(pts
@@ -1271,174 +1460,6 @@
 			(type default)
 		)
 		(uuid "f5561235-41a1-445a-b6ca-9394a15d3d54")
-	)
-	(rectangle
-		(start 13.97 127)
-		(end 175.26 160.02)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 03117eb3-04bf-42eb-9077-2e57df23132c)
-	)
-	(rectangle
-		(start 13.97 162.56)
-		(end 175.26 195.58)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 148bbce3-096d-4574-bfcd-f5c42f213187)
-	)
-	(rectangle
-		(start 13.97 55.88)
-		(end 175.26 88.9)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 7cf69237-576d-4c05-896f-99d333d9933f)
-	)
-	(rectangle
-		(start 13.97 91.44)
-		(end 175.26 124.46)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 888976dc-3cda-4fe6-af37-933aefe2589f)
-	)
-	(rectangle
-		(start 13.97 20.32)
-		(end 175.26 53.34)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid f0c11082-bb6d-4f8f-8844-d4b193b473b9)
-	)
-	(text_box "; Examples and cheatsheet for simulation in KiCad, taken\n; from \"PSPICE Command Summary\" pdf-file.\n; \n; * * * STIMULUS TYPE * * *\n; \n; dc 0 sin(0 15 50  0  0  0)\n;  \\  \\  \\  \\  \\  \\  \\  \\  \\_ _ _  phase (phase)\n;   \\  \\  \\  \\  \\  \\  \\  \\_ _ _ _  df (damping factor)\n;    \\  \\  \\  \\  \\  \\  \\_ _ _ _ _  td (delay)\n;     \\  \\  \\  \\  \\  \\_ _ _ _ _ _  freq (frequency)\n;      \\  \\  \\  \\  \\_ _ _ _ _ _ _  va (peak amplitude voltage)\n;       \\  \\  \\  \\_ _ _ _ _ _ _ _  vo (offset voltage)\n;        \\  \\  \\_ _ _ _ _ _ _ _ _  stimulus type sinus\n;         \\  \\_ _ _ _ _ _ _ _ _ _  dc voltage (usually not needed)\n;          \\_ _ _ _ _ _ _ _ _ _ _  dc stimulus (usually not needed)\n; \n; dc 0 pulse(0  5  0  0  0  1m 2m)\n;  \\  \\    \\  \\  \\  \\  \\  \\  \\  \\_ per (periode)\n;   \\  \\    \\  \\  \\  \\  \\  \\  \\_ _ pw (pulse width)\n;    \\  \\    \\  \\  \\  \\  \\  \\_ _ _ tf (fall time)\n;     \\  \\    \\  \\  \\  \\  \\_ _ _ _ tr (rise time)\n;      \\  \\    \\  \\  \\  \\_ _ _ _ _ td (delay time)\n;       \\  \\    \\  \\  \\_ _ _ _ _ _ v2 (pulsed voltage)\n;        \\  \\    \\  \\_ _ _ _ _ _ _ v1 (initial voltage)\n;         \\  \\    \\_ _ _ _ _ _ _ _ stimulus type pulse\n;          \\  \\_ _ _ _ _ _ _ _ _ _ dc voltage (usually not needed)\n;           \\_ _ _ _ _ _ _ _ _ _ _ dc stimulus (usually not needed)\n; \n; * * * ANALYSE TYPE * * *\n; \n; .op                              dc op mode (dc compute, no plot)\n; \n; .dc V1 1 100 1\n;   \\  \\  \\  \\  \\_ _ _ _ _ _ _ _ _ variable value step\n;    \\  \\  \\  \\_ _ _ _ _ _ _ _ _ _ variable value stop\n;     \\  \\  \\_ _ _ _ _ _ _ _ _ _ _ variable value start\n;      \\  \\_ _ _ _ _ _ _ _ _ _ _ _ variable (component/source)\n;       \\_ _ _ _ _ _ _ _ _ _ _ _ _ dc analysis\n; \n; .ac lin/dec 1000 1 1meg\n;  \\      \\      \\  \\  \\_ _ _ _ _  frequency stop\n;   \\      \\      \\  \\_ _ _ _ _ _  frequency start\n;    \\      \\      \\_ _ _ _ _ _ _  points\n;     \\      \\_ _ _ _ _ _ _ _ _ _  lin or dec plot\n;      \\_ _ _ _ _ _ _ _ _ _ _ _ _  ac analysis (frequency sweep)\n; \n; .tran 1m  1\n;  \\      \\  \\_ _ _ _ _ _ _ _ _ _  end time\n;   \\      \\_ _ _ _ _ _ _ _ _ _ _  steps\n;    \\_ _ _ _ _ _ _ _ _ _ _ _ _ _  transient analysis"
-		(exclude_from_sim no)
-		(at 177.8 20.32 0)
-		(size 104.14 139.7)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(face "Courier New")
-				(size 1.5 1.5)
-			)
-			(justify left top)
-		)
-		(uuid "aca74c05-6553-4061-965c-e53432a55343")
-	)
-	(text ";Parameters the KiCad way"
-		(exclude_from_sim no)
-		(at 19.05 17.78 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "12359fcc-fcf1-4ebe-8e7b-401e131d3fc6")
-	)
-	(text ";Simulation commands"
-		(exclude_from_sim no)
-		(at 152.4 17.78 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "531bac51-188f-4af6-b8b9-6c0f8db3a581")
-	)
-	(text ";.op"
-		(exclude_from_sim no)
-		(at 152.4 148.59 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6a0e39c8-e356-4203-98a7-548e987569f3")
-	)
-	(text ";.ac dec 1000 1 1meg"
-		(exclude_from_sim no)
-		(at 152.4 113.03 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9149b72d-d02a-484e-8dcb-5f37a3fcf68b")
-	)
-	(text ";.tran .1m 100m"
-		(exclude_from_sim no)
-		(at 152.4 78.74 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9ab0f56c-d4c5-4aa6-9ba5-9359d835cd4f")
-	)
-	(text ";.tran .1m 100m"
-		(exclude_from_sim no)
-		(at 152.4 41.91 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ae90ec0f-a770-4825-a9f9-659ffd432cac")
-	)
-	(text ";Parameters the PSPICE/LTSPICE way"
-		(exclude_from_sim no)
-		(at 101.854 17.526 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d1510e7c-458a-47fd-a6d7-f02a8a9d66c4")
-	)
-	(text ";.dc R9 10 1k 10"
-		(exclude_from_sim no)
-		(at 152.4 181.61 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e933feed-d403-4e5e-8f7c-09e54a73b17e")
 	)
 	(global_label "Out6"
 		(shape output)
@@ -4969,4 +4990,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

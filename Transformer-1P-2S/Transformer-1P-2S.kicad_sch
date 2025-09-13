@@ -1,19 +1,23 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55")
 	(paper "A4")
 	(title_block
 		(title "Transformer 1P 2S")
-		(date "2024-12-15")
+		(date "2025-09-13")
 		(company "GitHub/OJStuff")
 	)
 	(lib_symbols
 		(symbol "Device:L"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -80,32 +84,8 @@
 			)
 			(symbol "L_0_1"
 				(arc
-					(start 0 -2.54)
-					(mid 0.6323 -1.905)
-					(end 0 -1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -1.27)
-					(mid 0.6323 -0.635)
-					(end 0 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 0)
-					(mid 0.6323 0.635)
+					(start 0 2.54)
+					(mid 0.6323 1.905)
 					(end 0 1.27)
 					(stroke
 						(width 0)
@@ -117,8 +97,32 @@
 				)
 				(arc
 					(start 0 1.27)
-					(mid 0.6323 1.905)
-					(end 0 2.54)
+					(mid 0.6323 0.635)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 -0.635)
+					(end 0 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -1.905)
+					(end 0 -2.54)
 					(stroke
 						(width 0)
 						(type default)
@@ -166,9 +170,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -287,12 +294,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "GND_1"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -383,12 +395,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "GND_2"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -479,9 +496,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Simulation_SPICE:VSIN"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.0254)
 			)
@@ -581,9 +601,9 @@
 			)
 			(symbol "VSIN_0_0"
 				(arc
-					(start 0 0)
+					(start -1.27 0)
 					(mid -0.635 0.6323)
-					(end -1.27 0)
+					(end 0 0)
 					(stroke
 						(width 0)
 						(type default)
@@ -593,9 +613,9 @@
 					)
 				)
 				(arc
-					(start 0 0)
+					(start 1.27 0)
 					(mid 0.635 -0.6323)
-					(end 1.27 0)
+					(end 0 0)
 					(stroke
 						(width 0)
 						(type default)
@@ -664,7 +684,86 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(rectangle
+		(start 144.78 90.17)
+		(end 148.59 110.49)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid b4b962f4-4c94-49fe-8cb8-a674bb667dec)
+	)
+	(text "; Up/Us1 = √(L1/L2)\n; Up/Us2 = √(L1/L3)"
+		(exclude_from_sim no)
+		(at 135.636 64.516 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "06281b12-c65a-4d7f-af77-682f33e6e50a")
+	)
+	(text "; Secondary side"
+		(exclude_from_sim no)
+		(at 166.37 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "57942c5e-8278-4e4a-9c72-026cccb0f6b6")
+	)
+	(text "K1 L1 L2 1.0\nK2 L1 L3 1.0\nK3 L2 L3 1.0"
+		(exclude_from_sim no)
+		(at 139.7 82.804 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "912df508-0829-44f8-9205-cd08f6702bd6")
+	)
+	(text "Transformer core"
+		(exclude_from_sim no)
+		(at 147.32 109.22 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "acd7e875-b43b-4411-b7ef-e1a40be26dfc")
+	)
+	(text "; Primary side"
+		(exclude_from_sim no)
+		(at 115.316 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "be5a976b-280d-44bb-b663-b105f4ece461")
+	)
+	(text "; Ideal transformer with 100% (1.0) coupling between L1, L2 and 3"
+		(exclude_from_sim no)
+		(at 114.046 70.866 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fd98c1c5-9bac-42fc-a62f-0ae7c10598c6")
 	)
 	(junction
 		(at 157.48 100.33)
@@ -818,87 +917,8 @@
 		)
 		(uuid "ed602b79-3bd5-4dfa-9607-5c7f5b444ad2")
 	)
-	(rectangle
-		(start 144.78 90.17)
-		(end 148.59 110.49)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid b4b962f4-4c94-49fe-8cb8-a674bb667dec)
-	)
-	(text "; Up/Us1 = √(L1/L2)\n; Up/Us2 = √(L1/L3)"
-		(exclude_from_sim no)
-		(at 135.636 64.516 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "06281b12-c65a-4d7f-af77-682f33e6e50a")
-	)
-	(text "; Secondary side"
-		(exclude_from_sim no)
-		(at 166.37 86.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "57942c5e-8278-4e4a-9c72-026cccb0f6b6")
-	)
-	(text "K1 L1 L2 1.0\nK2 L1 L3 1.0\nK3 L2 L3 1.0"
-		(exclude_from_sim no)
-		(at 139.7 82.804 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "912df508-0829-44f8-9205-cd08f6702bd6")
-	)
-	(text "Transformer core"
-		(exclude_from_sim no)
-		(at 147.32 109.22 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "acd7e875-b43b-4411-b7ef-e1a40be26dfc")
-	)
-	(text "; Primary side"
-		(exclude_from_sim no)
-		(at 115.316 86.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "be5a976b-280d-44bb-b663-b105f4ece461")
-	)
-	(text "; Ideal transformer with 100% (1.0) coupling between L1, L2 and 3"
-		(exclude_from_sim no)
-		(at 114.046 70.866 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "fd98c1c5-9bac-42fc-a62f-0ae7c10598c6")
-	)
 	(label "Vp"
 		(at 135.89 87.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -906,28 +926,6 @@
 			(justify left bottom)
 		)
 		(uuid "04017fb6-b76f-4c08-8cc9-f68c1509e502")
-	)
-	(label "Vs2"
-		(at 157.48 113.03 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "046cad75-57c7-4029-b685-f43bec0453a4")
-	)
-	(label "Vs1"
-		(at 157.48 87.63 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "739c7c90-848a-41e2-85e8-1c8fce9f6714")
 	)
 	(global_label "Us2"
 		(shape input)
@@ -1817,4 +1815,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

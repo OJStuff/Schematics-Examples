@@ -1,17 +1,19 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "a81f47c8-d758-4a1a-b078-3bf1b27e0f5d")
 	(paper "A4")
 	(title_block
 		(title "OPamp, noninverting")
-		(date "2024-12-15")
+		(date "2025-09-13")
 		(company "GitHub/OJStuff")
 	)
 	(lib_symbols
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -130,12 +132,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "GND_1"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -226,6 +233,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Simulation_SPICE:OPAMP"
 			(pin_names
@@ -270,7 +278,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Operational amplifier, single, node sequence=1:+ 2:- 3:OUT 4:V+ 5:V-"
+			(property "Description" "Operational amplifier, single"
 				(at 0 0 0)
 				(effects
 					(font
@@ -298,7 +306,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp"
+			(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
 				(at 0 0 0)
 				(effects
 					(font
@@ -431,9 +439,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "VDC_1"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.0254)
 			)
@@ -631,9 +642,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "VSIN_1"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.0254)
 			)
@@ -733,9 +747,9 @@
 			)
 			(symbol "VSIN_1_0_0"
 				(arc
-					(start 0 0)
+					(start -1.27 0)
 					(mid -0.635 0.6323)
-					(end -1.27 0)
+					(end 0 0)
 					(stroke
 						(width 0)
 						(type default)
@@ -745,9 +759,9 @@
 					)
 				)
 				(arc
-					(start 0 0)
+					(start 1.27 0)
 					(mid 0.635 -0.6323)
-					(end 1.27 0)
+					(end 0 0)
 					(stroke
 						(width 0)
 						(type default)
@@ -816,6 +830,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -1754,9 +1769,9 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c315147a-534f-46cc-a071-608ea68a50cb")
+		(uuid "bd1bf45d-3d17-4fa7-b1e0-1f532296391e")
 		(property "Reference" "U1"
-			(at 157.48 91.4714 0)
+			(at 157.48 91.3698 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1764,7 +1779,7 @@
 			)
 		)
 		(property "Value" "${SIM.PARAMS}"
-			(at 157.48 93.3765 0)
+			(at 157.48 93.2749 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1789,7 +1804,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Operational amplifier, single, node sequence=1:+ 2:- 3:OUT 4:V+ 5:V-"
+		(property "Description" "Operational amplifier, single"
 			(at 149.86 96.52 0)
 			(effects
 				(font
@@ -1817,7 +1832,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp"
+		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
 			(at 149.86 96.52 0)
 			(effects
 				(font
@@ -1835,23 +1850,23 @@
 				(hide yes)
 			)
 		)
-		(pin "4"
-			(uuid "258edd40-7006-42e2-a7c3-4dcbe9a00c7f")
-		)
-		(pin "1"
-			(uuid "3a5a948c-3567-426c-bac8-e02657d39356")
+		(pin "2"
+			(uuid "62e617f3-e85e-4ce4-83f5-62208265a352")
 		)
 		(pin "5"
-			(uuid "10699787-737a-4b09-9895-c120b46ce2c9")
+			(uuid "c40dd5c0-f3a0-454f-a2aa-7a54b98ef3f3")
 		)
 		(pin "3"
-			(uuid "66e72fe3-7233-49c5-b74d-2e9b7deecddc")
+			(uuid "63180598-548e-4c61-ac73-67d3de75c795")
 		)
-		(pin "2"
-			(uuid "3a712f76-ce59-4c7b-8418-de4dd9aa518d")
+		(pin "4"
+			(uuid "69ae2ee1-7b93-407c-a7fd-e3007cdc6e99")
+		)
+		(pin "1"
+			(uuid "e5a4ddc8-89e0-4ce3-8cff-73cac96fc337")
 		)
 		(instances
-			(project "OPamp-noninverting-(.tran)"
+			(project ""
 				(path "/a81f47c8-d758-4a1a-b078-3bf1b27e0f5d"
 					(reference "U1")
 					(unit 1)
@@ -1931,4 +1946,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

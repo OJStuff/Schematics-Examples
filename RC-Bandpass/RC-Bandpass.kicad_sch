@@ -1,17 +1,19 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "510bdff2-b4df-459a-bdc0-52e2d5e2eb91")
 	(paper "A4")
 	(title_block
 		(title "RC Bandpass")
-		(date "2024-12-15")
+		(date "2025-09-13")
 		(company "GitHub/OJStuff")
 	)
 	(lib_symbols
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -84,7 +86,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -96,7 +98,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -145,9 +147,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -266,9 +271,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Simulation_SPICE:VSIN"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.0254)
 			)
@@ -368,9 +376,9 @@
 			)
 			(symbol "VSIN_0_0"
 				(arc
-					(start 0 0)
+					(start -1.27 0)
 					(mid -0.635 0.6323)
-					(end -1.27 0)
+					(end 0 0)
 					(stroke
 						(width 0)
 						(type default)
@@ -380,9 +388,9 @@
 					)
 				)
 				(arc
-					(start 0 0)
+					(start 1.27 0)
 					(mid 0.635 -0.6323)
-					(end 1.27 0)
+					(end 0 0)
 					(stroke
 						(width 0)
 						(type default)
@@ -451,12 +459,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -547,7 +560,54 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(rectangle
+		(start 121.92 76.2)
+		(end 156.21 132.08)
+		(stroke
+			(width 0)
+			(type dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 2adbb6fa-0ea4-4782-aa6c-0ad499bf021e)
+	)
+	(rectangle
+		(start 162.56 76.2)
+		(end 196.85 132.08)
+		(stroke
+			(width 0)
+			(type dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid d3fc6747-e0db-4981-9ca8-a064f5d66c08)
+	)
+	(text "Lowpass"
+		(exclude_from_sim no)
+		(at 175.26 74.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "031f0a87-8bd0-49d2-b329-41709c40841d")
+	)
+	(text "Higpass"
+		(exclude_from_sim no)
+		(at 134.62 74.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ac32658a-4079-40f6-9e46-43de31392cd2")
 	)
 	(junction
 		(at 181.61 91.44)
@@ -650,52 +710,6 @@
 			(type default)
 		)
 		(uuid "e6fe090a-0d90-49dd-837b-ed80ca4dd819")
-	)
-	(rectangle
-		(start 121.92 76.2)
-		(end 156.21 132.08)
-		(stroke
-			(width 0)
-			(type dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 2adbb6fa-0ea4-4782-aa6c-0ad499bf021e)
-	)
-	(rectangle
-		(start 162.56 76.2)
-		(end 196.85 132.08)
-		(stroke
-			(width 0)
-			(type dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid d3fc6747-e0db-4981-9ca8-a064f5d66c08)
-	)
-	(text "Lowpass"
-		(exclude_from_sim no)
-		(at 175.26 74.93 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "031f0a87-8bd0-49d2-b329-41709c40841d")
-	)
-	(text "Higpass"
-		(exclude_from_sim no)
-		(at 134.62 74.93 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ac32658a-4079-40f6-9e46-43de31392cd2")
 	)
 	(global_label "In"
 		(shape input)
@@ -1345,4 +1359,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

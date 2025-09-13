@@ -5,8 +5,8 @@
 	(uuid "b3642816-64ca-485c-b02d-58be90a3b954")
 	(paper "A4")
 	(title_block
-		(title "Voltage protection with discrete components")
-		(date "2025-04-03")
+		(title "Voltage Polarity protection with discrete components")
+		(date "2025-09-13")
 		(company "GitHub/OJStuff")
 	)
 	(lib_symbols

@@ -58,7 +58,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "Voltage-protection-discrete.kicad_prl",
+    "filename": "Voltage-Polarity-protection-discrete.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
